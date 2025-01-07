@@ -7,9 +7,11 @@
  <p name = "tech"> 
 
 ## ⚙️Tech 
-	 
-### 🌐 Environment
 
+
+
+  
+### 🌐 Environment
 
 
 **📦 Development**
@@ -19,23 +21,27 @@
   <img src="https://img.shields.io/badge/Visual Studio-007ACC?style=flat&logo=Visual Studio&logoColor=white"/>
 </div><br><br>
 
+
+
 **🖥️ Test**
 | HW  | First | Second | Third | fourth |
 | :------------ | :------------ | :------------ |  :------------ |  :------------ | 
 | CPU   | i7-10700F CPU@ 2.90GHz | AMD Ryzen 7 5800X 8-Core Processor | 12th Gen Intel(R) Core(TM) i5-12500KF | i7-10700F CPU @ 2.90GHz |
 | RAM   | 16GB | 32GB | 16GB | 16GB |
 | OS    | Window 10 Home |Window 10 Home |Window 10 Home |Window 10 Home |
-
-
-
-
  </p>
+
+
+
+
 <p name = "Language">
-	
+ 
 ### 🛠️ Language  
-	
-**🔧 Development**
+ 
+
 <div>
+	
+**🔧 Development :**
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat&logo=Javascript&logoColor=black">
 	<img src="https://img.shields.io/badge/react-61DAFB?style=flat&logo=React&logoColor=black">
 	<img src="https://img.shields.io/badge/python-3776AB?style=flat&logo=Python&logoColor=white">
@@ -43,11 +49,12 @@
 </div>
 
 
-**💬 Communication**
+
 <div> 
+
+ **💬 Communication :**
 <img src="https://img.shields.io/badge/notion-000000?style=flat&logo=notion&logoColor=white"> 
 </div>
- 
 </p>
 
 
@@ -55,13 +62,16 @@
 	
 ## 🚩 Project
 
+
 ### 📍 Overview
 > Development period : 2024.0.0. ~ 2024.0.0.
 > 
 > Subject : Software Engineering (Univ Team Project.)
 >
 > 농산물 정보 전달 및 가격 예측 웹사이트으로 농산물 정보를 분석하고 시각화하는 웹 애플리케이션 사용자는 다양한 데이터를 검색 가능 분석 결과를 제공하는 웹 사이트
-
+<p name = "Video", align="center">
+<img src="https://github.com/user-attachments/assets/28f530ed-f57e-4db8-86d0-7dcd4f1866f9">
+</p>
 
 ### 👥 Team Introduce
 |Name|Part|Detailed|ID|
@@ -75,13 +85,13 @@
 ### 📌Function
 
 
-1 페이지 설명
+**1. 페이지 설명**
 - 위치: 각 페이지 상단
 - 내용: 페이지별 기능과 사용법에 대한 간략한 설명을 제공합니다.
 
 
 
-2 네비게이션 바
+**2. 네비게이션 바**
 - 위치: 모든 페이지 상단
 - 구성 요소:
   1. 홈 (Home): 메인 화면으로 이동합니다.
@@ -91,7 +101,7 @@
 
 
 
-3 상세 검색
+**3. 상세 검색**
 - 설명: 특정 부류, 품목, 품종, 날짜를 선택하여 데이터를 검색하고 차트로 확인합니다.
 - 사용법:
   1. 부류, 품목, 품종을 선택합니다.
@@ -104,7 +114,7 @@
 
 
 
-4 실시간 AI 가격 예측
+**4. 실시간 AI 가격 예측**
 - 설명: LSTM, Linear Regression 등 4가지 AI 모델을 사용하여 가격을 예측합니다.
 - 사용법
   1. 실시간 AI 가격 예측 페이지로 이동합니다.
@@ -113,7 +123,7 @@
 
  
      
-5 뉴스
+**5. 뉴스**
 - 설명: 농업 관련 최신 뉴스를 확인할 수 있습니다.
 - 사용법
   1. 뉴스 페이지로 이동합니다.
@@ -122,7 +132,7 @@
 
 
 
-6 과거 경락 데이터
+**6. 과거 경락 데이터**
 - 설명: 과거 데이터를 기반으로 월별 또는 연도별 트렌드를 분석합니다.
 - 사용법
   1. 부류, 품목, 품종을 선택합니다.
@@ -154,7 +164,6 @@ Q4. 홈 페이지에 실시간 데이터가 계속 로딩중이에요.
 
 
   
-### Video
 
 
 
