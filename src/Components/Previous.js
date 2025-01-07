@@ -173,7 +173,7 @@ const Home = () => {
     // = API URL =
   const DB_PRE_SERVER_URL = 'http://localhost:4444/db/Previous'; 
   const DB_FRI_SERVER_URL = 'http://localhost:4444/db/Previous-thisFriday'; 
-  const REAL_SERVER_URL = 'http://localhost:4444/apiReal';
+  const REAL_SERVER_URL = 'http://localhost:4444/api/real';
   const [item, setitem] = useState([]); // 검색된 데이터 저장 
   const [itemReal, setitemReal] = useState([]); // 검색된 데이터 저장 
   const [chartData, setChartData] = useState(null); // 차트 데이터 저장

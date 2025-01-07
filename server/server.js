@@ -5,8 +5,7 @@ const port = 4444
 
 const mainPage = require("./Router/main")  
 const modelPrice = require("./Router/pythonCon") 
-const apiSale = require("./Router/apiSale")
-const apiReal = require("./Router/apiReal")
+const api = require("./Router/api") 
 const db = require("./Router/db")
 const model = require("./Router/pythonCon")
 const maria = require("./database/connect/maria")
@@ -19,8 +18,7 @@ const corsOption={
 app.use(cors(corsOption)) 
 app.use("/main",mainPage)
 app.use("/modelPrice",modelPrice) 
-app.use("/apiSale",apiSale)
-app.use("/apiReal",apiReal)
+app.use("/api",api) 
 app.use("/db",db)
 app.use("/model",model)
 maria.connect

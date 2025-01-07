@@ -10,10 +10,6 @@ router.get('/PastTransactionTrend', (req, res) => {
     const pCode = mid || null;
     const vCode = small || null;
 
-    console.log('Received large:', large);
-    console.log('Received mid:', mid);
-    console.log('Received small:', small);
-
     // 기본 쿼리
     let query = `
 WITH AggregatedData AS (
@@ -53,7 +49,7 @@ WITH AggregatedData AS (
             return res.status(500).json({ error: 'Database query error' });
         }
         res.json(results);
-        console.log(results);
+        console.log("The DB[Past Transaction Trend] received the results normally");
     });
 });
 
@@ -64,11 +60,7 @@ router.get('/Previous', (req, res) => {
     const bCode = large || null; 
     const pCode = mid || null;
     const vCode = small || null;
-    console.log('=PastTransactionTrend=');
-    console.log('Received large:', large);
-    console.log('Received mid:', mid);
-    console.log('Received small:', small); 
-    console.log('Received today:', today);
+
     let query = `
 WITH AggregatedData AS (
     SELECT 
@@ -172,8 +164,7 @@ query += `'${today}'`;
             console.error(err);
             return res.status(500).json({ error: 'Database query error' });
         }
-        res.json(results);
-        console.log(results);
+        console.log("The DB[Previous Date] received the results normally");
     });
 });
  
@@ -182,10 +173,6 @@ router.get('/Previous-thisFriday', (req, res) => {
     const bCode = large || null; 
     const pCode = mid || null;
     const vCode = small || null; 
-    console.log('Received large:', large);
-    console.log('Received mid:', mid);
-    console.log('Received small:', small); 
-    console.log('Received saleDate:', saleDate);
 
     let query = `
 WITH AggregatedData AS (
@@ -278,13 +265,13 @@ query += `'${saleDate}'`;
     query += `, INTERVAL 1 YEAR);`;  
 
     conn.query(query, (err, results) => { 
-        console.log("금일 데이터가 없어 금주 금요일 데이터를 가져옵니다.")   
+        console.log("There is no data in the DB today, so I receive the data this Friday.")   
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Database query error' });
         }
         res.json(results);
-        console.log(results);
+        console.log("The DB[Previous-This Friday] received the results normally");
     });
 });
 
@@ -303,14 +290,13 @@ router.get('/News-Newspaper', (req, res) => {
 `;
 
     // 데이터베이스 쿼리 실행
-    conn.query(query, (err, results) => {
-        console.log("농민신문 데이터를 가져옵니다.")
+    conn.query(query, (err, results) => { 
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Database query error' });
         }
         res.json(results);
-        console.log(results);
+        console.log("The DB[Newspaper] received the results normally");
     });
 });
 
@@ -330,21 +316,19 @@ router.get('/News-Alimi', (req, res) => {
 `;
 
     // 데이터베이스 쿼리 실행
-    conn.query(query, (err, results) => {
-        console.log("농어촌알리미의 데이터를 가져옵니다.")
+    conn.query(query, (err, results) => { 
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Database query error' });
         }
         res.json(results);
-        console.log(results);
+        console.log("The DB[Alimi] received the results normally");
     });
 });
 
 router.get("/News-BOTH", (req, res) => {
     const newsData = {};
   
-    // 농민신문 데이터 가져오기
         conn.query(
       `SELECT id, url, title, sub_title, image_url, 
               CASE 
@@ -362,7 +346,6 @@ router.get("/News-BOTH", (req, res) => {
         }
         newsData.Newspaper = results;
   
-        // 농어촌알리미 데이터 가져오기
         conn.query(
           `SELECT id, url, title, sub_title, image_url, 
                   CASE 
@@ -378,9 +361,8 @@ router.get("/News-BOTH", (req, res) => {
               return res.status(500).json({ message: "오류 발생", error: err });
             }
             newsData.Alimi = results;
-            console.log(newsData.Newspaper)
-            console.log(newsData.Alimi)
-            res.json(newsData); // 두 뉴스 데이터를 클라이언트로 전송
+            console.log("The DB[New Datas] received the results normally");
+            res.json(newsData);
           }
         );
       }
@@ -397,10 +379,6 @@ router.get('/Real', (req, res) => {
     const pCode = normalizeCode(mid || '');
     const vCode = normalizeCode(small || '');
 
-    console.log('Received large:', bCode);
-    console.log('Received mid:', pCode);
-    console.log('Received small:', vCode);
-    console.log('Received today:', today);
 
     const query = `
     WITH AggregatedData AS (
@@ -477,8 +455,7 @@ router.get('/Real', (req, res) => {
             ELSE '기타'
         END AS 날짜범주
     FROM ClosestData;`;
-
-    console.log('Generated SQL Query:', query);
+ 
 
     conn.query(query, (err, results) => {
         if (err) {
@@ -491,7 +468,7 @@ router.get('/Real', (req, res) => {
         }
 
         res.json(results);
-        console.log('Query Results:', results);
+        console.log("The DB[Comparision] received the results normally");
     });
 });
 

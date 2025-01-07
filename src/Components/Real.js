@@ -125,7 +125,7 @@ const Real = () => {
     autoplay: true,
     autoplaySpeed: 3000, // 자동 전환 속도 (밀리초)
   };
-  const REAL_SERVER_URL = 'http://localhost:4444/apiReal';
+  const REAL_SERVER_URL = 'http://localhost:4444/api/real';
   const PREVIOUS_SERVER_URL = 'http://localhost:4444/db/Real';
 
   const [content, setContent] = useState([]);

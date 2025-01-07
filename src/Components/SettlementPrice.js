@@ -117,7 +117,7 @@ const PageDescription = styled.div`
 // ===============================================================
 
 const Home = () => {
-  const API_SERVER_URL = 'http://localhost:4444/apiSale'; // API URL
+  const API_SERVER_URL = 'http://localhost:4444/api/sale'; // API URL
 
   const [item, setitem] = useState([]); // 검색된 데이터 저장 
   const [chartData, setChartData] = useState(null); // 차트 데이터 저장
